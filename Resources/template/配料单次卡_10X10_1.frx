@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="11/23/2021 18:12:39" ReportInfo.Modified="11/23/2021 20:22:13" ReportInfo.CreatorVersion="2019.3.5.0">
+  <Dictionary>
+    <Parameter Name="formula_id" DataType="System.String"/>
+    <Parameter Name="formula_name" DataType="System.String"/>
+    <Parameter Name="parts_id" DataType="System.String"/>
+    <Parameter Name="parts_name" DataType="System.String"/>
+    <Parameter Name="task_serial_number" DataType="System.String"/>
+    <Parameter Name="parts_batch_numbers" DataType="System.String"/>
+    <Parameter Name="login_user_username" DataType="System.String"/>
+    <Parameter Name="real_time" DataType="System.String"/>
+    <Parameter Name="weight" DataType="System.String"/>
+    <Parameter Name="QR_code" DataType="System.String"/>
+  </Dictionary>
+  <ReportPage Name="Page1" PaperWidth="100" PaperHeight="100" LeftMargin="0" TopMargin="0" RightMargin="0" BottomMargin="0" FirstPageSource="1" OtherPagesSource="1" Watermark.Font="宋体, 60pt">
+    <DataBand Name="Data1" Width="378" Height="378">
+      <TextObject Name="Text1" Left="9.45" Width="368.55" Height="47.25" Text="配 料 单 次 卡" HorzAlign="Center" VertAlign="Center" Font="宋体, 18pt, style=Bold"/>
+      <TextObject Name="Text2" Left="9.45" Top="47.25" Width="378" Height="28.35" Text="配方编号：[formula_id]" VertAlign="Center" Font="微软雅黑, 12pt"/>
+      <TextObject Name="Text3" Left="9.45" Top="75.6" Width="378" Height="28.35" Text="配方名称：[formula_name]" VertAlign="Center" Font="微软雅黑, 12pt"/>
+      <TextObject Name="Text4" Left="9.45" Top="132.3" Width="378" Height="28.35" Text="任务批次：[task_serial_number]" VertAlign="Center" Font="微软雅黑, 12pt"/>
+      <TextObject Name="Text5" Left="9.45" Top="189" Width="207.9" Height="28.35" Text="物料编号：[parts_id]" VertAlign="Center" Font="微软雅黑, 12pt"/>
+      <TextObject Name="Text6" Left="9.45" Top="160.65" Width="378" Height="28.35" Text="物料名称：[parts_name]" VertAlign="Center" Font="微软雅黑, 12pt"/>
+      <TextObject Name="Text7" Left="9.45" Top="103.95" Width="378" Height="28.35" Text="物料批号：[parts_batch_numbers]" VertAlign="Center" Font="微软雅黑, 12pt"/>
+      <TextObject Name="Text8" Left="9.45" Top="311.85" Width="368.55" Height="28.35" Text="称量人：[login_user_username]" VertAlign="Center" Font="微软雅黑, 12pt"/>
+      <TextObject Name="Text9" Left="9.45" Top="340.2" Width="368.55" Height="28.35" Text="时间日期：[real_time]" VertAlign="Center" Font="微软雅黑, 12pt"/>
+      <TextObject Name="Text10" Left="9.45" Top="255.15" Width="217.35" Height="56.7" Text="[weight]" HorzAlign="Center" VertAlign="Center" Font="微软雅黑, 16pt, style=Bold"/>
+      <TextObject Name="Text11" Left="9.45" Top="236.25" Width="113.4" Height="18.9" Text="物料重量" VertAlign="Center" Font="微软雅黑, 12pt"/>
+      <BarcodeObject Name="Barcode1" Left="217.35" Top="189" Width="116" Height="116" Expression="[QR_code]" Text="[QR_code]" ShowText="false" Barcode="QR Code" Barcode.ErrorCorrection="L" Barcode.Encoding="UTF8" Barcode.QuietZone="true"/>
+    </DataBand>
+  </ReportPage>
+</Report>
