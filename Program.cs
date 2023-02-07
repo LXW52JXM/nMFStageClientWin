@@ -63,6 +63,7 @@ namespace nMFStageClientWin
         {
             Process current = Process.GetCurrentProcess();
             Process[] processes = Process.GetProcessesByName(current.ProcessName);
+            System.Console.WriteLine("sbsbsbsbsbs");
             foreach (Process process in processes)
             {
                 if (process.Id != current.Id)
